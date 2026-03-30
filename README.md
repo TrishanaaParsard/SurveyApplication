@@ -87,7 +87,7 @@ Open `SurveyApi/appsettings.json` and paste your connection string:
 
 ---
 
-### 3. Install NuGet packages and run the API
+### 3. Run the API
 
 Open a terminal inside the `SurveyApi/SurveyApi` folder and run:
 
