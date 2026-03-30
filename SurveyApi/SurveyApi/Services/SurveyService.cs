@@ -51,7 +51,7 @@ namespace SurveyApi.Services
             {
                 Email = request.Email.Trim(),
                 IdNumber = request.IdNumber.Trim(),
-                SubmittedAt = DateTime.UtcNow,
+                SubmittedAt = DateTime.Now,
                 Answers = request.Answers.Select(a => new AnswerEntry
                 {
                     QuestionId = a.QuestionId,
@@ -100,7 +100,7 @@ namespace SurveyApi.Services
             Id = doc.Id ?? string.Empty,
             Email = doc.Email,
             IdNumber = doc.IdNumber,
-            SubmittedAt = doc.SubmittedAt.ToString("yyyy-MM-dd HH:mm:ss") + " UTC",
+            SubmittedAt = doc.SubmittedAt.ToString("yyyy-MM-dd HH:mm:ss"),
             Answers = doc.Answers.Select(a => new SubmissionAnswerResponse
             {
                 Question = a.QuestionText,
