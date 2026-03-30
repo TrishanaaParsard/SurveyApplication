@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Results</title>
+    <link rel="stylesheet" href="css/Styles.css" />
+</head>
+
+<body>
+
+    <div class="card card--wide">
+        <div class="card-header">
+            <div>
+                <h1>📊 Survey Results</h1>
+                <p>All submissions stored in MongoDB Atlas — newest first.</p>
+            </div>
+            <a href="Survey.html" class="btn btn-ghost"> Back to Survey</a>
+        </div>
+
+        <!-- Stats bar -->
+        <div class="stats-bar" id="statsBar" style="display:none">
+            <div class="stat-chip">Total submissions: <strong id="totalCount">–</strong></div>
+            <div class="stat-chip">Last received: <strong id="lastDate">–</strong></div>
+        </div>
+
+        <!-- Search filter -->
+        <div class="filter-bar">
+            <input type="text" id="searchInput" placeholder="🔍  Filter by email or ID number…"
+                oninput="filterTable()" />
+        </div>
+
+        <!-- Results table -->
+        <div class="table-wrapper">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Submitted At (UTC)</th>
+                        <th>Email Address</th>
+                        <th>ID Number</th>
+                        <th>Answers</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Skeleton rows while loading -->
+                    <tr>
+                        <td>
+                            <div class="skeleton-cell" style="width:20px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:140px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:180px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:110px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:80px"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="skeleton-cell" style="width:20px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:140px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:200px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:110px"></div>
+                        </td>
+                        <td>
+                            <div class="skeleton-cell" style="width:80px"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/Results.js"></script>
+</body>
+
+</html>

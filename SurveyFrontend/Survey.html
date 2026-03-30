@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Application</title>
+  <link rel="stylesheet" href="css/Styles.css" />
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h1>📋 Getting to Know You</h1>
+        <p>Please complete all fields. Required fields are marked <span class="required-star">*</span></p>
+      </div>
+      <a href="Results.html" class="btn btn-ghost">View Submissions</a>
+    </div>
+
+    <!-- Fixed fields: email + ID number -->
+    <div class="fixed-fields">
+      <div class="form-group">
+        <label for="email">Email Address <span class="required-star">*</span></label>
+        <input type="email" id="email" placeholder="john@example.com" />
+        <div class="error-msg" id="email-error"></div>
+      </div>
+      <div class="form-group">
+        <label for="idNumber">ID Number <span class="required-star">*</span></label>
+        <input type="text" id="idNumber" maxlength="13" placeholder="13-digit South African ID" />
+        <div class="error-msg" id="id-error"></div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Dynamic questions injected by script.js -->
+    <div id="questions-container">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-secondary" id="resetBtn">↺ Reset</button>
+      <button class="btn btn-primary" id="submitBtn">Submit </button>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="js/Script.js"></script>
+</body>
+
+</html>

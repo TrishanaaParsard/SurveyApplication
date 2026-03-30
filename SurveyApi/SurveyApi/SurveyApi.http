@@ -1,0 +1,18 @@
+@SurveyApi_HostAddress = https://localhost:7091
+
+GET {{SurveyApi_HostAddress}}/api/survey/questions
+
+###
+
+GET {{SurveyApi_HostAddress}}/api/survey/submissions
+
+###
+
+POST {{SurveyApi_HostAddress}}/api/survey/submit
+Content-Type: application/json
+
+{
+  //SubmitSurveyRequest
+}
+
+###
