@@ -60,7 +60,7 @@ Make sure the following are installed before running anything:
 
 You must do this before running the API — the app needs a live database connection to start correctly.
 
-**However for this demo, I have already kept url public and the user only has readonly access so no need to follow the rest of the steps.** 
+**However for this demo, I have already kept url public and the user only has read and write only access so no need to follow the rest of the steps.** 
 
 1. Sign up or log in at [cloud.mongodb.com](https://cloud.mongodb.com)
 2. Create a free **M0 cluster** (choose a region — Frankfurt is closest for SA)
